@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui;
+  --font-body: var(--font-source-sans), ui-sans-serif, system-ui;
+
+  --color-primary: #0F766E;
+  --color-secondary: #2563EB;
+  --color-accent: #F59E0B;
+  --color-background: #F8FAFC;
+
+  --radius-xl: 18px;
+  --radius-2xl: 28px;
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  body {
+    @apply font-body;
+  }
+}
+
+.medical-card {
+  @apply bg-white rounded-2xl p-6 shadow-soft border border-black/5 transition-all duration-300 hover:shadow-lg;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-xl font-medium transition-all hover:bg-primary/90 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-white text-primary border border-primary/20 px-6 py-3 rounded-xl font-medium transition-all hover:bg-primary/5 active:scale-95;
+}
